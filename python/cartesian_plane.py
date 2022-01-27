@@ -1,7 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
 
-def plane():
+
+def plane(callback, **kwargs):
+    if kwargs["save"]:
+        matplotlib.use("pgf")
+        matplotlib.rcParams.update({
+            "pgf.texsystem": "pdflatex",
+            'font.family': 'serif',
+            'text.usetex': True,
+            'pgf.rcfonts': False,
+        })
+
     # Select length of axes and the space between tick labels
     xmin, xmax, ymin, ymax = -3, 3, -3, 3
     ticks_frequency = 1
@@ -43,4 +54,9 @@ def plane():
     ax.plot((1), (0), marker='>', transform=ax.get_yaxis_transform(), **arrow_fmt)
     ax.plot((0), (1), marker='^', transform=ax.get_xaxis_transform(), **arrow_fmt)
 
-    return {plt, ax}
+    callback(plt, ax)
+    if kwargs["save"]:
+        plt.savefig('./python/graphs/1.1.40.pgf')
+    else:
+        plt.show()
+
