@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 
-def plane(callback, **kwargs):
+def draw(callback, **kwargs):
     if kwargs["save"]:
         matplotlib.use("pgf")
         matplotlib.rcParams.update({
