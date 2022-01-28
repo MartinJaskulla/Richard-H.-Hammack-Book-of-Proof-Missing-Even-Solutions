@@ -1,7 +1,7 @@
 import os
 from argparse import ArgumentParser
 
-from util import draw
+from cartesian_plane import draw
 
 def plot(plt, ax):
     circle = plt.Circle((0, 0), 1, color="lightgray")

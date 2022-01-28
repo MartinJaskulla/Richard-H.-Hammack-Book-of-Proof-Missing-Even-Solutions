@@ -1,5 +1,5 @@
 import numpy as np
-from util import draw
+from cartesian_plane import draw
 
 def plot(plt, ax):
     # create 100 equally spaced points between -2 and 2
