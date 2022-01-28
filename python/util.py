@@ -1,10 +1,15 @@
+import os
+import sys
+from argparse import ArgumentParser
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 
 
-def draw(callback, **kwargs):
-    if kwargs["save"]:
+def draw(callback):
+    save = getCommandLineArguments().save
+    if save:
         matplotlib.use("pgf")
         matplotlib.rcParams.update({
             "pgf.texsystem": "pdflatex",
@@ -55,8 +60,15 @@ def draw(callback, **kwargs):
     ax.plot((0), (1), marker='^', transform=ax.get_xaxis_transform(), **arrow_fmt)
 
     callback(plt, ax)
-    if kwargs["save"]:
-        plt.savefig('./python/graphs/1.1.40.pgf')
+    if save:
+        filename = os.path.basename(sys.modules['__main__'].__file__).replace('.py', "")
+        plt.savefig(f'./python/graphs/{filename}.pgf')
     else:
         plt.show()
 
+def getCommandLineArguments():
+    parser = ArgumentParser()
+    parser.add_argument("-s", "--save",
+                        action="store_true", dest="save", default=False,
+                        help="Save plot a .pgf file")
+    return parser.parse_args()
