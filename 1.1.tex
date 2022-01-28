@@ -41,42 +41,36 @@
         \centering
         \caption*{40. $\{(x,y):x \in [0,1], y\in [1,2] \}$}
         \resizebox{1\linewidth}{!}{\input{./python/graphs/1.1.40.pgf}}
-        \label{fig: freq_20Hz}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
         \caption*{42. $\{(x,y):x = 2,y \in [0,1] \}$}
         \resizebox{1\linewidth}{!}{\input{./python/graphs/1.1.42.pgf}}
-        \label{fig: freq_20Hz}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
         \caption*{44. $\{(x,x^2):x \in \mathbb{R} \} $}
         \resizebox{1\linewidth}{!}{\input{./python/graphs/1.1.44.pgf}}
-        \label{fig: freq_20Hz}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
         \caption*{46. $\{(x,y):x,y \in \mathbb{R},x^2+y^2\leq1 \}$}
         \resizebox{1\linewidth}{!}{\input{./python/graphs/1.1.46.pgf}}
-        \label{fig: freq_20Hz}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
         \caption*{48. $\{(x,y):x,y \in \mathbb{R},x > 1 \}$}
         \resizebox{1\linewidth}{!}{\input{./python/graphs/1.1.48.pgf}}
-        \label{fig: freq_20Hz}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
         \caption*{50. $\{(x,\frac{x^2}{y}):x \in \mathbb{R},y \in \mathbb{N} \}$}
         \resizebox{1\linewidth}{!}{\input{./python/graphs/1.1.50.pgf}}
-        \label{fig: freq_20Hz}
     \end{subfigure}
 \end{figure}
 \clearpage
@@ -86,10 +80,27 @@
         \centering
         \caption*{52. $\{(x,y) \in \mathbb{R}^2: (y-x^2)(y+x^2) =0 \}$}
         \resizebox{1\linewidth}{!}{\input{./python/graphs/1.1.52.pgf}}
-        \label{fig: freq_20Hz}
     \end{subfigure}
 \end{figure}
-\clearpage
- 
+
+\subsection{Section}
+
+\begin{enumerate}
+    \item [2.] $A=\{\pi, e, 0\}, B=\{0,1\}$
+    \begin{enumerate}
+        \item[a)] $ A \times B = \{(\pi, 0),(\pi, 1),(e, 0),(e, 1),(0, 0),(0, 1)\}$
+        \item[b)] $ B \times A = \{(0, \pi),(0, e),(0, 0),(1, \pi),(1, e),(1, 0)\}$
+        \item[c)] $ A \times A = \{(\pi, \pi),(\pi, e),(\pi, 0),(e, \pi),(e, e),(e, 0),(0, \pi),(0, e),(0, 0)\}$
+        \item[d)] $ B \times B = \{(0, 0),(0, 1),(1, 0),(1, 1)\}$
+        \item[e)] $ A \times \emptyset = \emptyset$
+        \item[f)] $ (A \times B) \times B = \{((\pi, 0), 0),((\pi, 0), 1),((\pi, 1), 0),((\pi, 1), 1),((e, 0), 0),$
+        \item[] $ ((e, 0), 1),((e, 1), 0),((e, 1), 1),((0, 0), 0),((0, 0), 1),((0, 1), 0),((0, 1), 1)\} $
+        \item[g)] $ A \times (B \times B) = \{(\pi, (0, 0)),(\pi, (0, 1)),(\pi, (1, 0)),(\pi, (1, 1)),(e, (0, 0)),$
+        \item[] $ (e, (0, 1)),(e, (1, 0)),(e, (1, 1)),(0, (0, 0)),(0, (0, 1)),(0, (1, 0)),(0, (1, 1))\}$
+        \item[h)] $ A \times B \times B = \{(\pi, 0, 0),(\pi, 0, 1),(\pi, 1, 0),(\pi, 1, 1),(e, 0, 0),(e, 0, 1),(e, 1, 0),$
+        \item[] $ (e, 1, 1),(0, 0, 0),(0, 0, 1),(0, 1, 0),(0, 1, 1)\}$
+    \end{enumerate}
+\end{enumerate}
+
 \end{document}
 
